@@ -1,0 +1,447 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+   }
+
+.subheader6{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(20, 28, 58, 0.7),transparent),url(./bentotaheader.jpg);
+    background-position: bottom;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+.subheader6 h1{
+    padding-top: 15%;
+    font-size: 55px;
+}
+
+
+header{
+    width: 100%;
+    z-index: 2;
+}
+
+header.fixed{
+    position: fixed;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) ;
+}
+
+header.scrolled{
+    background-color:rgba(20, 28, 58, 0.7) ;
+}
+
+  
+
+    
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+nav img{
+    width: 150px;
+    
+
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #0a6ea5;
+    display:block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+/* Dropdown Styles */
+.nav-links ul li.dropdown {
+    position: relative;
+}
+
+.nav-links ul li.dropdown .dropbtn {
+    cursor: pointer;
+}
+
+.nav-links ul li.dropdown .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.nav-links ul li.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-links ul li.dropdown .dropdown-content a {
+    color: #000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-links ul li.dropdown .dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+#close{
+    display: none;
+}
+#menu{
+    display: none;
+    cursor: pointer;
+ }
+
+
+
+ @media(max-width:1250px){
+    .text-box h1{
+        font-size: 50px;
+     
+    }
+
+    .text-box{
+        top: 40%;
+
+    }
+    .nav-links ul li{
+        
+       display: block;
+       padding: 30px;
+       overflow: hidden;
+       
+       
+       
+    }
+    .nav-links{
+        position: absolute;
+        background-color:#000;
+        height: 100vh;
+        width: 100%;
+        top:0;
+        right: 100%;
+        text-align: center;
+        z-index:5;
+        
+        padding-top: 60px;
+        overflow: hidden;
+       }
+       .nav-links .dropdown{
+        padding-bottom: 90px;
+    }
+   
+  
+    .nav-links .dropdown-content {
+          position: relative;
+          display: none;
+    
+          
+        }
+      
+    .nav-links .dropdown:hover .dropdown-content {
+          display: block;
+
+          
+        }
+      
+    .nav-links .dropdown-content ul {
+          padding-left: 20px;
+   
+        }
+      
+    .nav-links .dropdown-content li {
+          display: block;
+  
+        }
+        
+    .nav-links .dropdown-content a {
+        display: block;
+        padding: 8px 0;
+        text-decoration: none;
+        color: #fff;
+       
+       
+        }
+
+       .explorebtn{
+        left: 45%;
+       }
+
+    #close{
+        display: block;
+        color: #fff;
+        margin: 10px;
+        font-size: 27px;
+        cursor: pointer;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+    #menu{
+        display: block;
+        color: #fff;
+
+    }
+    #menu span{
+        font-size: 50px;
+    }
+  
+    .nav-links ul{
+        padding: 30px;
+    }
+   
+
+    
+
+}
+
+
+
+
+
+
+
+.abt-bentota{
+    text-align:left;
+    margin: auto;
+    padding-top: 100px;
+    width: 80%;
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+p{
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+.bactivities{
+    text-align: left;
+    margin: auto;
+    padding-top: 50px;
+    width: 80%;
+}
+.bactivities h2{
+    margin-top: 5%;
+    text-align: left;
+}
+
+
+.bactivities h2{
+    margin-bottom: 30px;
+    text-align: left;
+}
+.bactivities ol {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+    
+}
+
+.img-gallery{
+    width: 80%;
+    margin: 100px auto  50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+}
+
+.img-gallery img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.img-gallery img:hover{
+    transform: scale(0.8) rotate(15deg);
+    border-radius: 20px;
+    box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+}
+
+.overview{
+    width: 100%;
+    height: 100vh;
+    background:rgba(20, 28, 58, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+}
+
+.overview img{
+    width: 90%;
+    max-width: 500px;
+
+}
+
+.overview span{
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+}
+.bentotaloc{
+    
+    width: 80%;
+    margin: auto;
+
+    
+    
+    border-radius: 10px;
+
+}
+.benloc{
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+   
+}
+.benloc iframe{
+    width: 100%;
+}
+
+.beneffort{
+    text-align:left;
+    margin: auto;
+    padding-top: 100px;
+    width: 80%;
+
+}
+
+.footersec{
+    margin-top: 150px;
+    width: 100%;
+    padding: 100px 15%;
+    background: rgba(20, 28, 58, 0.7);
+    color: #efefef;
+   
+    box-sizing:border-box ;
+    
+}
+.footerrow{
+    display: flex;
+}
+
+
+.footersec .col1{
+    text-align: left;
+
+}
+.footersec .col2{
+    text-align: center;
+
+}
+.footersec .col3{
+    text-align: center;
+
+}
+.col1{
+    text-align: left;
+}
+
+.col2{
+    flex-grow: 2;
+}
+
+.footersec div h3{
+    font-weight: 300;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+
+
+form input{
+    width: 300px;
+    height: 45px;
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    outline: none;
+    border: none;
+}
+
+form button{
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 30px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.social_icons{
+    margin-top: 30px;
+}
+
+.social_icons img{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+
+.footersec div a{
+    text-decoration: underline;
+    cursor: pointer;
+    color: #fff;
+}
+@media(max-width:1250px){
+    .footerrow {
+        flex-direction: column;
+    }
+    .footerrow .col1{
+        text-align: center;
+    }
+    .col1{
+        margin-bottom: 40px;
+        
+    }
+    .col2{
+        margin-bottom: 100px;
+        
+    }
+}
